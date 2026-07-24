@@ -7,6 +7,6 @@ DB_DIR = os.path.join(BASE_DIR, "chroma_db")
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
-# Yerel model ayarları
+
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-LLM_MODEL_NAME = "llama3"  # Foundry Local veya Ollama üzerindeki model
+LLM_MODEL_NAME = "llama3"  
