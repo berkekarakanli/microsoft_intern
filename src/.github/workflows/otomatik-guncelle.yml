@@ -1,0 +1,30 @@
+name: Otomatik GitHub İşlemi
+
+on:
+  push:
+    branches: [ "main" ]
+  # İsterseniz belirli saatlerde otomatik çalışması için cron ekleyebilirsiniz:
+  # schedule:
+  #   - cron: '0 0 * * *' # Her gün gece yarısı
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Repoyu Kopyala (Checkout)
+      uses: actions/checkout@v4
+
+    - name: Git Ayarlarını Yap
+      run: |
+        git config --global user.name "Bot Kullanıcı"
+        git config --global user.email "bot@example.com"
+
+    - name: Dosyalarda Değişiklik Yap veya Ekle
+      run: |
+        echo "Son güncelleme tarihi: $(date)" >> zaman.txt
+
+    - name: Değişiklikleri Kaydet ve Gönder
+      run: |
+        git add .
+        git commit -m "Otomatik güncelleme: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+        git push

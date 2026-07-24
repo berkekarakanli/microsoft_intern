@@ -1,0 +1,7 @@
+Foundry Local ve RAG Mimarisinin Geleceği
+
+Yapay zeka modelleri genellikle eğitildikleri tarihe kadar olan bilgileri bilirler. RAG (Retrieval-Augmented Generation), bu sorunu çözmek için geliştirilmiş bir sistemdir. RAG, büyük dil modellerinin (LLM) dışarıdan sağlanan güncel veya gizli belgeleri okuyarak cevap üretmesini sağlar.
+
+Local RAG yaklaşımının en büyük avantajı veri gizliliğidir. Verileriniz internetteki bulut sunucularına (örneğin OpenAI veya Google sunucularına) gönderilmez. Bunun yerine tüm işlemler, bilgisayarınızın kendi donanımında gerçekleşir. Foundry Local ve Ollama gibi platformlar, Llama-3 veya Mistral gibi açık kaynaklı modellerin kişisel bilgisayarlarda yüksek performansla çalışmasına olanak tanır. 
+
+Bu sayede şirketler, kendi iç yazışmalarını veya müşteri verilerini dışarı sızdırma korkusu olmadan yapay zeka asistanlarına entegre edebilirler.
