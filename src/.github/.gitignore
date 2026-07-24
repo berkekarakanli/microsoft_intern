@@ -1,0 +1,6 @@
+chroma_db/
+.idea/
+.agents/
+.claude/
+.venv/
+__pycache__/
