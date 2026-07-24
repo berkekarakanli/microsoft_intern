@@ -12,11 +12,11 @@ class DocumentProcessor:
         )
 
     def load_and_split(self, file_path):
-        # 1. Dosyanın sistemde gerçekten var olup olmadığını kontrol et
+       
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"Sistem Hatası: Belirtilen konumda dosya bulunamadı -> {file_path}")
 
-        # 2. Uzantı kaynaklı hataları önlemek için küçük harfe (lower) çevirerek kontrol et
+       
         file_path_lower = file_path.lower()
 
         if file_path_lower.endswith('.pdf'):
@@ -26,6 +26,6 @@ class DocumentProcessor:
         else:
             raise ValueError(f"Desteklenmeyen format: {file_path}. Lütfen sadece .txt veya .pdf kullanın.")
 
-        # 3. Yükle ve parçala
+        
         documents = loader.load()
         return self.text_splitter.split_documents(documents)
